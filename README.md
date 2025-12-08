@@ -1,5 +1,6 @@
 # Bank Cards Management System
 
+[![CI/CD Pipeline](https://github.com/asachiyigor/bank-rest/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/asachiyigor/bank-rest/actions/workflows/ci.yml)
 [![Java](https://img.shields.io/badge/Java-17-blue.svg)](https://www.oracle.com/java/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4.12-green.svg)](https://spring.io/projects/spring-boot)
 
