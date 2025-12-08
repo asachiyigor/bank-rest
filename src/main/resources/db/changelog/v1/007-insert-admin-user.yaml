@@ -1,0 +1,65 @@
+databaseChangeLog:
+  - changeSet:
+      id: 007-insert-admin-user
+      author: system
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: username
+                  value: admin
+              - column:
+                  name: email
+                  value: admin@example.com
+              - column:
+                  name: password
+                  value: $2a$10$dXJ3SW6G7P50lGmMkkmwe.20cQQubK3.HZWzG3YB1tlRy.fqvM/BG
+              - column:
+                  name: full_name
+                  value: System Administrator
+              - column:
+                  name: created_at
+                  valueDate: now()
+        - insert:
+            tableName: user_roles
+            columns:
+              - column:
+                  name: user_id
+                  value: 1
+              - column:
+                  name: role_id
+                  value: 2
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: username
+                  value: user
+              - column:
+                  name: email
+                  value: user@example.com
+              - column:
+                  name: password
+                  value: $2a$10$dXJ3SW6G7P50lGmMkkmwe.20cQQubK3.HZWzG3YB1tlRy.fqvM/BG
+              - column:
+                  name: full_name
+                  value: Regular User
+              - column:
+                  name: created_at
+                  valueDate: now()
+        - insert:
+            tableName: user_roles
+            columns:
+              - column:
+                  name: user_id
+                  value: 2
+              - column:
+                  name: role_id
+                  value: 1
