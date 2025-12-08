@@ -1,0 +1,33 @@
+# Базовая конфигурация (общая для всех профилей)
+spring:
+  application:
+    name: bank-cards-management
+
+  profiles:
+    default: postgres
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+jwt:
+  secret: MySecretKeyForJWTTokenGenerationAndValidation123456
+  expiration: 86400000
+
+card:
+  encryption:
+    secret: MySecretKey12345
+
+logging:
+  level:
+    root: INFO
+    com.example.bankcards: DEBUG
+    org.springframework.security: DEBUG
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
