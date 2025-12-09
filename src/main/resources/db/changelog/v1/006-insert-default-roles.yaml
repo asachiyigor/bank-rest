@@ -2,6 +2,11 @@ databaseChangeLog:
   - changeSet:
       id: 006-insert-default-roles
       author: system
+      preConditions:
+        - onFail: MARK_RAN
+        - sqlCheck:
+            expectedResult: 0
+            sql: SELECT COUNT(*) FROM roles WHERE name IN ('ROLE_USER', 'ROLE_ADMIN')
       changes:
         - insert:
             tableName: roles
