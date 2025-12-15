@@ -35,14 +35,14 @@ jobs:
         run: mvn package -DskipTests -B
 
       - name: Upload JAR artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: bank-cards-jar
           path: target/*.jar
           retention-days: 7
 
       - name: Upload JaCoCo coverage report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: jacoco-coverage-report
           path: target/site/jacoco/
